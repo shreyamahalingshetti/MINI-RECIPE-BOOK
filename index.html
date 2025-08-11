@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mini Recipe Book</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <div class="header-section">
+            <h1>Find Your Next Favorite Recipe 🍲</h1>
+            <form id="searchForm">
+                <img src="images/search.png" role="button" onclick="searchRecipe()" id="searchForm">
+                <input type="text" id="search" placeholder="search">
+            </form>
+        </div>
+        <div id="cards">
+            <ul id="row">
+                <li style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/gobi.jpg'); background-size: cover; color: white; font-family: 'Quicksand', sans-serif; text-align: center; line-height: 200px; width: 200px; height: 200px;" onclick="showRecipe(this)" data-title="Gobi Manchurian" data-recipe="To make Gobi Manchurian, coat cauliflower florets in a batter of maida, corn flour, salt, pepper, and ginger-garlic paste, then deep-fry until golden. In a pan, sauté onion and capsicum, add soy sauce, tomato ketchup, and chili sauce, then toss in the fried florets until well coated.">gobi manchurian</li>
+                <li style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/french-fries.jpg'); background-size: cover; color: white; font-family: 'Quicksand', sans-serif; text-align: center; line-height: 200px; width: 200px; height: 200px;" onclick="showRecipe(this)" data-title="French Fries" data-recipe="Peel and cut potatoes into thin sticks, soak them in cold water for 20–30 minutes, then drain and pat dry. Heat oil in a deep pan, fry the potatoes on medium heat until soft, remove and drain. Increase heat and fry again until golden and crispy.">French Fries</li>
+                <li style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/honey-chilli-potato.jpg'); background-size: cover; color: white; font-family: 'Quicksand', sans-serif; text-align: center; line-height: 200px; width: 200px; height: 200px;" onclick="showRecipe(this)" data-title="Honey Chilli Potato" data-recipe="Fry potato fingers until golden and crispy, then toss them in a sauce made with honey, chilli sauce, soy sauce, vinegar, and a hint of garlic. Coat well so the potatoes absorb the sweet-spicy flavor, then garnish with toasted sesame seeds and chopped spring onions before serving hot.">honey chilli potato</li>
+            </ul>
+            <ul id="row">
+                <li style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/butter-naan.jpg'); background-size: cover; color: white; font-family: 'Quicksand', sans-serif; text-align: center; line-height: 200px; width: 200px; height: 200px;" onclick="showRecipe(this)" data-title="Butter Kulcha" data-recipe="Mix 2 cups maida with 2 tbsp curd, 1 tsp sugar, ½ tsp baking powder, ¼ tsp baking soda, salt, and 2 tbsp oil, then knead with water into a soft dough and rest for 2–3 hours. Roll portions into oval shapes, cook on a hot tawa or tandoor until golden spots appear, flip and cook the other side, then brush generously with butter. Serve hot with curry or dal.">Butter Kulcha</li>
+                <li style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/kaju-butter-masala.jpg'); background-size: cover; color: white; font-family: 'Quicksand', sans-serif; text-align: center; line-height: 200px; width: 200px; height: 200px;" onclick="showRecipe(this)" data-title="Kaju Butter Masala" data-recipe="To make Kaju Butter Masala, soak ½ cup cashews in warm water for 20 minutes, then grind into a smooth paste. Heat butter in a pan, sauté 1 tsp ginger-garlic paste, then add 2–3 tbsp tomato puree and cook until oil separates. Stir in turmeric, chili powder, garam masala, and salt. Add the cashew paste, ½ cup cream or milk, and a little water to adjust consistency. Simmer for a few minutes, garnish with more cashews and coriander, and serve hot with naan or kulcha.">Kaju butter masala</li>
+                <li style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/chicken-biryani.jpg'); background-size: cover; color: white; font-family: 'Quicksand', sans-serif; text-align: center; line-height: 200px; width: 200px; height: 200px;" onclick="showRecipe(this)" data-title="Chicken Biryani" data-recipe="Marinate chicken in yogurt, spices, and lemon juice, then cook with onions, tomatoes, and green chillies. Parboil basmati rice with whole spices, then layer it over the chicken with fried onions, mint, coriander, and saffron milk. Seal and cook on low heat until flavors blend, then serve hot with raita.">Chicken biryani</li>
+            </ul>
+        </div>
+        <div id="recipePage">
+            <button onclick="goBack()" id="backBtn">← Back</button>
+            <h2 id="recipeTitle" style="font-family: 'Pacifico', 'Quicksand', sans-serif;"></h2>
+            <p id="recipeContent" style="font-family: 'Open Sans', sans-serif; line-height: 1.6;"></p>
+        </div>
+        <script src="style.js"></script>
+    </body>
+</html>

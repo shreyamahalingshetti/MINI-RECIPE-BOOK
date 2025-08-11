@@ -1,0 +1,154 @@
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fff0e5;
+  color: #333;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  margin-top: 30px;
+}
+
+h1 {
+  font-family: 'Quicksand', sans-serif;
+  color: #5a3826;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px #fff;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+}
+
+form img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+form input[type="text"] {
+  box-shadow: 0 0 5px #f2f2f2;
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 200px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+#cards #row {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  padding: 0;
+  list-style-type: none;
+}
+
+#cards li {
+  font-family: 'Quicksand', sans-serif;
+  text-transform: uppercase;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#cards li:hover {
+  transform: scale(1.05);
+}
+
+#recipePage {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fffef7;
+  padding: 30px;
+  box-sizing: border-box;
+  z-index: 10;
+  transition: opacity 0.5s ease-in-out;
+  overflow-y: auto;
+  width: 400px;
+  height: fit-content;
+  max-height: 90vh;
+  border-radius: 10px;
+  border: 1px solid #333;
+  opacity: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 25px 30px;
+}
+
+#backBtn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  .header-section {
+    margin-top: 15px;
+    gap: 5px;
+  }
+
+  form input[type="text"] {
+    width: 150px;
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+  #cards #row {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  #cards li {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  #recipePage {
+    position: fixed !important;
+    top: 120px !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important; 
+    width: 90% !important;
+    max-width: 350px !important;
+    height: auto !important;
+    max-height: 80vh !important;
+  }
+}
